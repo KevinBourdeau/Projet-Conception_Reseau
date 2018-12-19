@@ -1,2 +1,2 @@
-# Projet-Conception_R-seau
+# Projet-Conception_Reseau
 CesiSport : 2017 est l’année de l’Esport, un florilège d’évènements a vu le jour, donnant une place très importante aux compétitions de jeux vidéo. En tant que responsable de l’association de gaming CES’ESPORT, vous avez décidé de vous lancer dans l’organisation d’une Lan party qui se positionnera parmi les plus grandes de France accueillant 500 joueurs, 2500 visiteurs sur deux jours et proposant un cash prize de plus de 15000 euros.
