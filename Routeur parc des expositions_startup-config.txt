@@ -1,0 +1,132 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname R1
+!
+!
+!
+enable password 7 082A49580017
+!
+!
+ip dhcp excluded-address 192.168.4.1
+ip dhcp excluded-address 192.168.5.1
+ip dhcp excluded-address 192.168.6.129
+ip dhcp excluded-address 192.168.6.65
+!
+ip dhcp pool LOL
+ network 192.168.4.0 255.255.255.0
+ default-router 192.168.4.1
+ dns-server 1.1.1.2
+ip dhcp pool WIFI
+ network 192.168.0.0 255.255.252.0
+ip dhcp pool CSGO
+ network 192.168.5.0 255.255.255.0
+ default-router 192.168.5.1
+ dns-server 1.1.1.2
+ip dhcp pool RL
+ network 192.168.6.128 255.255.255.192
+ default-router 192.168.6.129
+ dns-server 1.1.1.2
+ip dhcp pool PUBG
+ network 192.168.6.64 255.255.255.192
+ default-router 192.168.6.65
+ dns-server 1.1.1.2
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+username kevin password 7 082A49580017
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name cesisport.com
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 1.1.1.1 255.0.0.0
+!
+interface GigabitEthernet1/0
+ ip address 192.168.4.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet2/0
+ ip address 192.168.5.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet3/0
+ ip address 192.168.6.129 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet4/0
+ ip address 192.168.6.65 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet5/0
+ ip address 192.168.6.193 255.255.255.192
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet6/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet7/0
+ no ip address
+ duplex auto
+ speed auto
+!
+router rip
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+banner motd L'acces a cet appareil est formellement interdit ! Merci de votre comprehension !
+!
+!
+!
+!
+line con 0
+ password 7 082A49580017
+ login
+!
+line aux 0
+!
+line vty 0 4
+ password 7 082A49580017
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 082A49580017
+ login local
+ transport input ssh
+!
+!
+!
+end
+
